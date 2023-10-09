@@ -8,18 +8,18 @@ body {
     font-family: sans-serif;
 }
 
-.icons{
+.icons {
     font-size: 2em;
     color: #0084FD;
     text-align: center;
 }
 
-.container{
+.container {
     width: 100%;
     max-height: 100vh;
 }
 
-.container1{
+.container1 {
     width: 100%;
 }
 
@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-.menu{
+.menu {
     width: 20%;
     background-color: #B5DDFF;
     min-height: 3em;
@@ -48,7 +48,15 @@ body {
     text-align: center;
 }
 
-.dflex{
+.dflex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dflexlilaccards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -57,16 +65,16 @@ body {
 }
 
 
-.bigcard{
+.bigcard {
     width: 80%;
     min-height: 4em;
     margin: 0.5em auto;
     text-align: center;
     padding: 1em;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.bigbutton{
+.bigbutton {
     width: 10em;
     min-height: 2em;
     border-radius: 10px;
@@ -74,14 +82,14 @@ body {
     text-align: center;
 }
 
-.smallbutton{
+.smallbutton {
     width: 6em;
     min-height: 2em;
     border-radius: 10px;
     margin-top: 1em;
 }
 
-.buttonicon{
+.buttonicon {
     width: 15em;
     min-height: 2em;
     border-radius: 20px;
@@ -89,24 +97,44 @@ body {
 
 }
 
-.smallcard{
+.smallcard {
     width: 80%;
     min-height: 2em;
-    margin: 0.5em  auto;
+    margin: 0.5em auto;
     padding: 0.5em;
+    border-radius: 10px;
 
 }
 
-.containerlilac{
+.smallcard1{
+    width: 80%;
+    min-height: 2em;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    border-radius: 10px;
+
+}
+
+.lilaccard {
+    width: 80%;
+    min-height: 2em;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    border-radius: 10px;
+
+}
+
+
+.containerlilac {
     width: 90%;
     min-height: 3em;
     background-color: #DDD2F3;
     margin: 0.5em auto;
-   
+
 
 }
 
-.mediumcard{
+.mediumcard {
     width: 90%;
     min-height: 3em;
     border-radius: 5px;
@@ -115,15 +143,15 @@ body {
     margin-bottom: 1em;
 }
 
-.arrow{
+.arrow {
     border-radius: 50%;
     height: 2em;
     width: 2em;
-    margin:  1em auto;
+    margin: 1em auto;
     line-height: 2em;
 }
 
-.text{
+.text {
     margin: 1em;
 }
 
@@ -141,12 +169,12 @@ body {
 
 }
 
-.bg-lilac{
+.bg-lilac {
     background-color: #9593E6;
 }
 
 
-.bg-white{
+.bg-white {
     background-color: white;
 }
 
@@ -156,53 +184,140 @@ body {
 
 /* * TEXT COLOR * */
 
-.text-color-blue{
+.text-color-blue {
     color: #0084FD;
 }
 
-.text-color-lilac{
+.text-color-lilac {
     color: #9792E4;
 }
 
-.text-color-white{
+.text-color-white {
     color: white;
 }
 
-.text-color-orange{
+.text-color-orange {
     color: #FDC15F;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
 /* * MARGIN * */
 
-.margin-top{
+.margin-top {
     margin-top: 1em;
 }
 
-.margin-top05{
+.margin-top2{
+    margin-top: 2em;
+}
+
+.margin-top05 {
     margin-top: 0.5em;
 }
 
-.margin-bottom{
+.margin-bottom {
     margin-bottom: 1em;
 }
 
-.margin-right{
+.margin-right {
     margin-right: 0.5em;
 }
 
-.margin{
+.margin-left{
+    margin-left: 0.5em;
+}
+
+.margin {
     margin: 1em 0.5em;
 }
 
-.margin-auto{
+.margin-auto {
     margin: auto;
+}
+
+/* * PADDING * */
+
+.padding{
+    padding: 1em;
 }
 
 /* * QUERIES * */
 
 /* TABLET*/
 
+@media screen and (min-width: 768px) {
+
+    .container {
+        width: 100%
+    }
+
+    .dflex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .bigcard {
+        width: 65%;
+    }
+
+    .smallcard {
+        width: 30%;
+        margin-bottom: 1em;
+    }
+
+    .mediumcard {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    .dflexlilaccards {
+        flex-direction: column;
+    }
+
+    .lilaccard{
+        width: 90%;
+    }
+
+    .smallcard.bg-white{
+        width: 45%;
+        
+    }
+
+    .cardl{
+        width: 70%;
+        padding: 2em;
+    }
+
+    .smallcard1{
+        width: 100%;
+    }
+    
+    .w30{
+        width: 30%;
+        padding: 2em;
+    }
+
+    .subscription{
+        width: 60%;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .blackft{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media  screen and (min-width:900px) {
+    
+}
+
+@media screen and (min-width:1200) {
+    
+}
