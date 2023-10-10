@@ -16,12 +16,9 @@ body {
 
 .container {
     width: 100%;
-    max-height: 100vh;
 }
 
-.container1 {
-    width: 100%;
-}
+
 
 .dflexnav {
     display: flex;
@@ -30,22 +27,31 @@ body {
     margin: 0 2em 0 2em;
 }
 
+
 .logo {
-    width: 20%;
-    background-color: #B5DDFF;
+    max-width: 60%;
     min-height: 3em;
     margin: 0.5em;
     padding: 1em;
-    text-align: center;
 }
 
 .menu {
-    width: 20%;
-    background-color: #B5DDFF;
+    min-width: 20%;
     min-height: 3em;
     margin: 0.5em;
     padding: 1em;
-    text-align: center;
+
+}
+
+.menubutton{
+    border-radius: 30px;
+    background-color: white;
+    min-width: 6em;
+
+}
+
+.menu > .menubutton, .menuitems{
+    display: none;
 }
 
 .dflex {
@@ -66,9 +72,9 @@ body {
 
 
 .bigcard {
-    width: 80%;
     min-height: 4em;
     margin: 0.5em auto;
+    width: 80%;
     text-align: center;
     padding: 1em;
     border-radius: 10px;
@@ -77,9 +83,10 @@ body {
 .bigbutton {
     width: 10em;
     min-height: 2em;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 1em;
     text-align: center;
+    border: none;
 }
 
 .smallbutton {
@@ -87,6 +94,7 @@ body {
     min-height: 2em;
     border-radius: 10px;
     margin-top: 1em;
+    border: none;
 }
 
 .buttonicon {
@@ -94,50 +102,57 @@ body {
     min-height: 2em;
     border-radius: 20px;
     margin-top: 1em;
+    border: none;
 
 }
 
 .smallcard {
     width: 80%;
-    min-height: 2em;
+    min-height: 4em;
     margin: 0.5em auto;
     padding: 0.5em;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
-.smallcard1{
+
+
+.smallcard1 {
     width: 80%;
     min-height: 2em;
     margin: 0.5em auto;
     padding: 0.5em;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
 .lilaccard {
     width: 80%;
-    min-height: 2em;
     margin: 0.5em auto;
     padding: 0.5em;
     border-radius: 10px;
 
 }
 
+.testimonialphoto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
 
 .containerlilac {
-    width: 90%;
-    min-height: 3em;
-    background-color: #DDD2F3;
-    margin: 0.5em auto;
-
+   width: 50%;
+   max-height: 50%;
+   margin-top: 2em;
 
 }
 
 .mediumcard {
     width: 90%;
     min-height: 3em;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: center;
     padding: 0.5em;
     margin-bottom: 1em;
@@ -149,13 +164,29 @@ body {
     width: 2em;
     margin: 1em auto;
     line-height: 2em;
+    text-align: center;
 }
 
 .text {
     margin: 1em;
 }
 
+.phoneimg{
+    max-width: 40%;
+    max-height: 20em;
+}
+
 /* * UTILITIES * */
+
+/* * WIDTH * */
+
+.width-60{
+    width: 60%;
+}
+
+.width-100{
+    width: 100%;
+}
 
 /* BACKGROUND */
 
@@ -200,8 +231,16 @@ body {
     color: #FDC15F;
 }
 
+.text-color-gray{
+    color: #D0CFF2;
+}
+
 .text-center {
     text-align: center;
+}
+
+.font-size{
+    font-size: 15px;
 }
 
 /* * MARGIN * */
@@ -210,7 +249,7 @@ body {
     margin-top: 1em;
 }
 
-.margin-top2{
+.margin-top2 {
     margin-top: 2em;
 }
 
@@ -220,13 +259,18 @@ body {
 
 .margin-bottom {
     margin-bottom: 1em;
+
+}
+
+.margin-bottom-20{
+    margin-bottom: -20px;
 }
 
 .margin-right {
     margin-right: 0.5em;
 }
 
-.margin-left{
+.margin-left {
     margin-left: 0.5em;
 }
 
@@ -240,9 +284,10 @@ body {
 
 /* * PADDING * */
 
-.padding{
+.padding {
     padding: 1em;
 }
+
 
 /* * QUERIES * */
 
@@ -251,7 +296,14 @@ body {
 @media screen and (min-width: 768px) {
 
     .container {
-        width: 100%
+        width: 766px;
+        margin: auto;
+    }
+
+    .containerlilac{
+        width: 400px;
+        margin: auto;
+        margin-top: 2em;
     }
 
     .dflex {
@@ -261,12 +313,13 @@ body {
     }
 
     .bigcard {
-        width: 65%;
+        width: calc(100% / 2 - 0.5em);
+        
     }
 
     .smallcard {
-        width: 30%;
-        margin-bottom: 1em;
+        width: calc(100% / 3 - 0.5em);
+    
     }
 
     .mediumcard {
@@ -279,45 +332,48 @@ body {
         flex-direction: column;
     }
 
-    .lilaccard{
-        width: 90%;
+    .lilaccard {
+        justify-content: center;
     }
 
-    .smallcard.bg-white{
+    .smallcard.bg-white {
         width: 45%;
-        
+
     }
 
-    .cardl{
+    .cardl {
         width: 70%;
         padding: 2em;
     }
 
-    .smallcard1{
+    .smallcard1 {
         width: 100%;
     }
-    
-    .w30{
+
+    .w30 {
         width: 30%;
         padding: 2em;
     }
 
-    .subscription{
+    .subscription {
         width: 60%;
         margin: auto;
         flex-direction: column;
     }
 
-    .blackft{
-        width: 80%;
+    .container.bg-black {
+        width: 100%;
         margin: auto;
+    }
+
+    .blackft{
+        width: 766px;
     }
 }
 
-@media  screen and (min-width:900px) {
+@media screen and (min-width:992px) {
+
+    
     
 }
 
-@media screen and (min-width:1200) {
-    
-}
