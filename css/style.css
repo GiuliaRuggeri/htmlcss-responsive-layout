@@ -288,6 +288,12 @@ body {
     padding: 1em;
 }
 
+/* * FLEX * */
+
+.wrap{flex-wrap: wrap;}
+.nowrap{
+    
+}
 
 /* * QUERIES * */
 
@@ -373,7 +379,64 @@ body {
 
 @media screen and (min-width:992px) {
 
+    .container {
+        width: 990px;
+        margin: auto;
+    }
+
+    .dflex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .dflex.cards{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dflex.subscription{
+        display: flex;
+        flex-direction: column;
+    }
     
+    .dflex.blackft{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lilaccard{
+        flex-direction: column;
+    }
+
+    .mediumcard {
+        width: 50%;
+        margin: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .containerlilac{
+        width: 50%;
+    }
+
+    .text > h4{
+        text-align: left;
+    }
+    .text > p{
+        text-align: left;
+    }
+
+    .container.bg-black {
+        width: 100%;
+        margin: auto;
+    }
+
+    .blackft{
+        width: 990px;
+        margin: auto;
+    }
+
     
 }
 
